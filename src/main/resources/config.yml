@@ -1,0 +1,66 @@
+# SpawnerShop - cửa hàng bán spawner thật của SmartSpawner (có giao diện, gộp stack như Donut)
+# Tiền được trừ qua Vault (EssentialsX).
+
+# Tiêu đề cửa hàng. Dùng & cho màu (hỗ trợ &#RRGGBB).
+title: "&8ѕʜᴏᴘ - ѕᴘᴀᴡɴᴇʀ"
+
+# Lệnh console chạy sau khi trừ tiền thành công.
+# %player% = tên người mua, %type% = loại quái, %amount% = số lượng
+give-command: "ss give spawner %player% %type% %amount%"
+
+# Số lượng mua khi bấm: chuột trái, và Shift + chuột trái
+amount-click: 1
+amount-shift-click: 10
+
+sounds:
+  success: ENTITY_EXPERIENCE_ORB_PICKUP
+  fail: ENTITY_VILLAGER_NO
+
+messages:
+  prefix: "&8[&6Shop&8] "
+  success: "%prefix%&aĐã mua &f%amount%x %name% &atrong giá &e$%price%&a."
+  not-enough-money: "%prefix%&cBạn không đủ tiền. Cần &e$%price%&c."
+  inventory-full: "%prefix%&cTúi đồ của bạn đã đầy."
+  no-economy: "%prefix%&cChưa có hệ thống tiền (Vault). Báo admin."
+  give-failed: "%prefix%&cKhông đưa được spawner, đã hoàn tiền. Báo admin."
+  reloaded: "%prefix%&aĐã tải lại config."
+  no-permission: "%prefix%&cBạn không có quyền."
+  players-only: "Chỉ người chơi mới mở được cửa hàng."
+
+lore:
+  - "&fBuy Price: &a$%price%"
+  - "&fClick to purchase this spawner"
+  - "&7Shift + Click: mua %shiftamount%"
+
+# Danh sách spawner bán. Giá lấy từ shard-shop của DonutShop.
+# type = tên loại quái dùng trong lệnh "ss give spawner" (dùng Tab trong lệnh để xem tên đúng).
+# icon (không bắt buộc) = Material hiển thị. Nếu bỏ trống sẽ tự tìm trứng sinh quái, không có thì dùng SPAWNER.
+spawners:
+  - name: "Pig Spawner"
+    type: pig
+    price: 250
+  - name: "Cow Spawner"
+    type: cow
+    price: 350
+  - name: "Zombie Spawner"
+    type: zombie
+    price: 400
+  - name: "Skeleton Spawner"
+    type: skeleton
+    price: 500
+  - name: "Creeper Spawner"
+    type: creeper
+    price: 625
+  - name: "Spider Spawner"
+    type: spider
+    price: 750
+  - name: "Zombified Piglin Spawner"
+    type: zombified_piglin
+    price: 750
+  - name: "Blaze Spawner"
+    type: blaze
+    price: 1000
+  - name: "Iron Golem Spawner"
+    type: iron_golem
+    price: 1500
+    icon: IRON_BLOCK

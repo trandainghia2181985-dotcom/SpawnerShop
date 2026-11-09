@@ -1,0 +1,18 @@
+name: SpawnerShop
+version: '1.0.0'
+main: com.spawnershop.SpawnerShopPlugin
+api-version: '${api.version}'
+description: Cua hang ban spawner that cua SmartSpawner (tru tien bang Vault)
+softdepend: [Vault, Essentials, EssentialsX, SmartSpawner]
+commands:
+  spawnershop:
+    description: Mo cua hang spawner
+    usage: /<command> [reload]
+    aliases: [sps, spawners]
+permissions:
+  spawnershop.use:
+    description: Cho phep mo cua hang spawner
+    default: true
+  spawnershop.admin:
+    description: Cho phep /spawnershop reload
+    default: op
